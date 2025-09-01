@@ -1,7 +1,13 @@
 version: "3.9"
 services:
   selenium-app:
-    build: .
+    image: selenium/standalone-chrome:latest
     container_name: selenium-browser
+    volumes:
+      - ./app:/app
+    working_dir: /app
     stdin_open: true
     tty: true
+    command: >
+      sh -c "pip install -r requirements.txt &&
+             python smart_wait_browser.py"
