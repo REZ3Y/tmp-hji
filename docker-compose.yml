@@ -1,0 +1,7 @@
+version: "3.9"
+services:
+  selenium-app:
+    build: .
+    container_name: selenium-browser
+    stdin_open: true
+    tty: true
