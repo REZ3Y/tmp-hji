@@ -10,4 +10,4 @@ services:
     tty: true
     command: >
       sh -c "pip install -r requirements.txt &&
-             python smart_wait_browser.py"
+             python browser.py"
